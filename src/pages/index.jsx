@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { getSortedSongs } from '@/engine'
 import { homePageTitle, homePageDesc } from '@/items/wording'
-import Layout from '@/comp/Layout'
-import SongsToDisplay from '@/comp/SongsToDisplay'
+import Layout from '@/comp/C00Layout'
+import SongsToDisplay from '@/comp/C02SongsToDisplay'
 
 export const getStaticProps = async () => {
   const songs = getSortedSongs()

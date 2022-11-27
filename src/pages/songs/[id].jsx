@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '@/comp/Layout'
+import Layout from '@/comp/C00Layout'
 import { getIDs, getOneSong } from '@/engine'
 
 export const getStaticPaths = async () => {
