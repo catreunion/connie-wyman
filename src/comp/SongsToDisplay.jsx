@@ -18,12 +18,12 @@ const SongsToDisplay = ({ songs }) => {
             <div className="flex-1 truncate">
               <Link href={`/songs/${item.id}`}>
                 <h3 className="pb-3 text-lg font-medium text-gray-900">{item.title}</h3>
+                <div>
+                  <span className="mt-1 truncate text-sm text-gray-500">
+                    {`原唱：${item.artist}　作詞：${item.lyrics}　作曲：${item.composer}`}
+                  </span>
+                </div>
               </Link>
-              <div>
-                <span className="mt-1 truncate text-sm text-gray-500">
-                  {`原唱：${item.artist}　作詞：${item.lyrics}　作曲：${item.composer}`}
-                </span>
-              </div>
             </div>
           </div>
         </li>

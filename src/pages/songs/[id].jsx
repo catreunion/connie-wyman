@@ -1,6 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../../comp/Layout'
-// import Date from '../../comp/DateFormatter'
 import { getIDs, getOneSong } from '../../engine'
 import { siteTitle } from '../../wording'
 
@@ -29,9 +29,15 @@ const SongPage = ({ song }) => {
       </Head>
 
       <Layout>
-        <h1>{song.title}</h1>
-        {/* <Date dateString={song.date} /> */}
-        <div className="prose prose-slate" dangerouslySetInnerHTML={{ __html: song.contentHTML }} />
+        <div className="mx-auto max-w-md">
+          <Link href="/">
+            <h1 className="pb-12 pt-6 text-center text-5xl font-bold tracking-wide sm:text-6xl">
+              {song.title}
+            </h1>
+          </Link>
+
+          <div className="prose prose-slate mx-auto" dangerouslySetInnerHTML={{ __html: song.contentHTML }} />
+        </div>
       </Layout>
     </>
   )
