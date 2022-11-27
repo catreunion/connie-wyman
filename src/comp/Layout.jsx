@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import HomeHeader from '@/comp/HomeHeader'
+import HomePageHeader from '@/comp/HomePageHeader'
 import SongPageHeader from '@/comp/SongPageHeader'
 import Footer from '@/comp/Footer'
 
@@ -9,14 +9,12 @@ const Layout = ({ children, home }) => {
       <header>
         {home ? (
           <>
-            <HomeHeader />
+            <HomePageHeader />
           </>
         ) : (
-          <>
-            <Link href="/">
-              <SongPageHeader />
-            </Link>
-          </>
+          <Link href="/">
+            <SongPageHeader />
+          </Link>
         )}
       </header>
 

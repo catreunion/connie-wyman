@@ -1,8 +1,8 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { remark } from 'remark'
 import html from 'remark-html'
+import { remark } from 'remark'
 
 const postsDirectory = path.join(process.cwd(), 'src/posts')
 
@@ -44,11 +44,11 @@ export const getOneSong = async (id) => {
   const filePath = path.join(postsDirectory, `${id}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const jsonContent = matter(fileContent)
-  const contentHTML = (await remark().use(html).process(jsonContent.content)).toString()
+  const htmlContent = (await remark().use(html).process(jsonContent.content)).toString()
 
   return {
     id,
-    contentHTML,
+    htmlContent,
     ...jsonContent.data,
   }
 }

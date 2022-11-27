@@ -1,30 +1,25 @@
-const HomeHeader = () => {
+import Link from 'next/link'
+
+const HomePageHeader = () => {
   return (
     <div className="relative px-6 lg:px-8">
       <div className="mx-auto max-w-3xl pt-9 pb-16">
-        {/* props.desc */}
         <h2 className="py-6 text-center text-base leading-8 tracking-wider text-gray-600">In love with</h2>
 
-        {/* props.title */}
         <h1 className="py-6 text-center text-5xl font-bold tracking-wide sm:text-6xl">Wyman Wong</h1>
 
-        {/* props.fetchBy */}
         <div className="flex justify-center py-6">
           <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             <span className="tracking-wide text-gray-600">
               a page created by{' '}
-              <a
-                href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props"
-                className="font-semibold tracking-widest text-indigo-600"
-              >
+              <Link href="/" className="font-semibold tracking-widest text-indigo-600">
                 Black Bean
-              </a>
+              </Link>
             </span>
           </div>
         </div>
       </div>
 
-      {/* bg */}
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
         <svg
           className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
@@ -56,4 +51,4 @@ const HomeHeader = () => {
   )
 }
 
-export default HomeHeader
+export default HomePageHeader

@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../../comp/Layout'
-import { getIDs, getOneSong } from '../../engine'
-import { siteTitle } from '../../wording'
+import Layout from '@/comp/Layout'
+import { getIDs, getOneSong } from '@/engine'
 
 export const getStaticPaths = async () => {
   const paths = await getIDs()
   return {
-    paths: paths,
+    paths,
     fallback: false,
   }
 }
@@ -25,7 +24,8 @@ const SongPage = ({ song }) => {
   return (
     <>
       <Head>
-        <title>{`${song.title} | ${siteTitle}`}</title>
+        <title>{`${song.title} | Lyrics by Wyman Wong`}</title>
+        <meta name="description" content={`${song.title} | Lyrics by Wyman Wong`} />
       </Head>
 
       <Layout>
@@ -36,7 +36,7 @@ const SongPage = ({ song }) => {
             </h1>
           </Link>
 
-          <div className="prose prose-slate mx-auto" dangerouslySetInnerHTML={{ __html: song.contentHTML }} />
+          <div className="prose prose-slate mx-auto" dangerouslySetInnerHTML={{ __html: song.htmlContent }} />
         </div>
       </Layout>
     </>

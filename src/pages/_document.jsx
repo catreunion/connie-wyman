@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { siteTitle, siteDesc } from '@/wording'
+import { siteTitle, siteDesc } from '@/items/wording'
 
 const Document = (props) => {
   let pageProps = props.__NEXT_DATA__?.props?.pageProps
