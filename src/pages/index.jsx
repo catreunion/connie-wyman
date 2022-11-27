@@ -4,6 +4,7 @@ import { getSortedSongs } from '../engine'
 import Layout from '../comp/Layout'
 // import DateFormatter from '../comp/DateFormatter'
 import { siteTitle, siteDesc } from '../wording'
+import SongsToDisplay from '@/comp/SongsToDisplay'
 
 export const getStaticProps = async () => {
   const songs = getSortedSongs()
@@ -24,16 +25,15 @@ const Home = ({ songs }) => {
       </Head>
 
       <Layout home>
-        <h1>{siteTitle}</h1>
-        <ul>
-          {/* {posts.map(({ id, date, title }) => ( */}
+        <SongsToDisplay songs={songs} />
+
+        {/* <ul>
           {songs.map(({ id, title }) => (
             <li key={id}>
               <Link href={`/songs/${id}`}>{title}</Link>
-              {/* <DateFormatter dateString={date} /> */}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </Layout>
     </>
   )

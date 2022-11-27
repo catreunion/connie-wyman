@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import HomeHeader from '@/comp/HomeHeader'
+import SongPageHeader from '@/comp/SongPageHeader'
+import Footer from '@/comp/Footer'
 
 const Layout = ({ children, home }) => {
   return (
@@ -6,12 +9,12 @@ const Layout = ({ children, home }) => {
       <header>
         {home ? (
           <>
-            <img src="/img/profile.jpg" />
+            <HomeHeader />
           </>
         ) : (
           <>
             <Link href="/">
-              <img src="/img/profile.jpg" />
+              <SongPageHeader />
             </Link>
           </>
         )}
@@ -19,7 +22,7 @@ const Layout = ({ children, home }) => {
 
       <main>{children}</main>
 
-      <footer>{!home && <Link href="/">← Back to home</Link>}</footer>
+      <Footer />
     </>
   )
 }
