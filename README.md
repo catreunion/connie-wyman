@@ -1,4 +1,5 @@
-[可惜我是水瓶座 歌詞 黃偉文 ※ Mojim.com](https://mojim.com/twy104596x1x7.htm)
+[黃偉文 | 魔鏡歌詞](https://mojim.com/twh104596.htm)
+[黃偉文](https://zh.m.wikipedia.org/zh-hk/%E9%BB%83%E5%81%89%E6%96%87)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
