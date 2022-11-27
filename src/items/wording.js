@@ -1,4 +1,4 @@
-export const homePageTitle = 'In love with Wyman'
+export const homePageTitle = 'In love with Wyman Wong'
 export const homePageDesc = 'A fan page of Wyman Wong. Created by Black Bean.'
 export const keywords = 'Wyman'
 

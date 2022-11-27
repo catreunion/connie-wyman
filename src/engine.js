@@ -4,23 +4,23 @@ import matter from 'gray-matter'
 import html from 'remark-html'
 import { remark } from 'remark'
 
-const postsDirectory = path.join(process.cwd(), 'src/posts')
+const songsDirectory = path.join(process.cwd(), 'src/songs')
 
 export const getSortedSongs = () => {
-  const files = fs.readdirSync(postsDirectory)
-  const posts = files.map((fileName) => {
+  const files = fs.readdirSync(songsDirectory)
+  const songs = files.map((fileName) => {
     const id = fileName.replace(/\.md$/, '')
-    const filePath = path.join(postsDirectory, fileName)
+    const filePath = path.join(songsDirectory, fileName)
     const fileContent = fs.readFileSync(filePath, 'utf8')
     const jsonContent = matter(fileContent)
 
     return {
-      id: id,
+      id,
       ...jsonContent.data,
     }
   })
 
-  return posts.sort((a, b) => {
+  return songs.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
@@ -30,7 +30,7 @@ export const getSortedSongs = () => {
 }
 
 export const getIDs = () => {
-  const files = fs.readdirSync(postsDirectory)
+  const files = fs.readdirSync(songsDirectory)
   return files.map((fileName) => {
     return {
       params: {
@@ -41,7 +41,7 @@ export const getIDs = () => {
 }
 
 export const getOneSong = async (id) => {
-  const filePath = path.join(postsDirectory, `${id}.md`)
+  const filePath = path.join(songsDirectory, `${id}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const jsonContent = matter(fileContent)
   const htmlContent = (await remark().use(html).process(jsonContent.content)).toString()
@@ -53,7 +53,7 @@ export const getOneSong = async (id) => {
   }
 }
 
-// return allPosts.sort(({ date: a }, { date: b }) => {
+// return allsongs.sort(({ date: a }, { date: b }) => {
 //   if (a < b) {
 //     return 1
 //   } else if (a > b) {

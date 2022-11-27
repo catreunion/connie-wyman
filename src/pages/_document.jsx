@@ -17,7 +17,6 @@ const Document = (props) => {
         />
 
         <meta name="og:title" content={homePageTitle} />
-        <meta name="description" content={homePageDesc} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="og:image"
