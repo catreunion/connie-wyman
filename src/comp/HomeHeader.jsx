@@ -12,7 +12,7 @@ const HomeHeader = () => {
         <div className="flex justify-center py-6">
           <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             <span className="tracking-wide text-gray-600">
-              a fan page created by{' '}
+              a page created by{' '}
               <a
                 href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props"
                 className="font-semibold tracking-widest text-indigo-600"

@@ -1,5 +1,5 @@
 export const siteTitle = 'In love with Wyman'
-export const siteDesc = 'A fan page of Wyman Wong, a great x in Hong Kong.'
+export const siteDesc = 'A fan page of Wyman Wong. Created by Black Bean'
 export const keywords = 'Wyman'
 
 export const EXAMPLE_PATH = 'blog-starter'
