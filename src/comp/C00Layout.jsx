@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HomePageHeader from '@/comp/C01HomePageHeader'
-import SongPageHeader from '@/comp/C03SongPageHeader'
-import Footer from '@/comp/C04Footer'
+import SongPageHeader from '@/comp/C01SongPageHeader'
+import Footer from '@/comp/C09Footer'
 
 const Layout = ({ children, home }) => {
   return (
